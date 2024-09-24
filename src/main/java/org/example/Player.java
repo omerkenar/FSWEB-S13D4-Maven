@@ -13,6 +13,10 @@ public class Player {
         this.weapon = weapon;
     }
 
+    public Weapon getWeapon(){
+        return this.weapon;
+    }
+
     private void checkHealthPercentage(int healthPercentage) {
         if (healthPercentage<0){
             this.healthPercentage=0;
@@ -36,7 +40,7 @@ public class Player {
     }
 
     public void restoreHealth(int healthPotion){
-        this.healthPercentage+=healthPotion;
-        checkHealthPercentage(this.healthPercentage);
+        healthPercentage+=healthPotion;
+        checkHealthPercentage(healthPercentage);
     }
 }
